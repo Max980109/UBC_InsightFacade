@@ -1,10 +1,3 @@
-# CPSC 310 Project Repository
-
-This repository contains starter code for the class project.
-Please keep your repository private.
-
-Piazza is your best resource for additional details about the [project](https://github.com/ubccpsc/310/blob/2019sept/project/README.md), [AutoTest](https://github.com/ubccpsc/310/blob/2019sept/project/AutoTest.md), and the specific requirements of each [project deliverable](https://github.com/ubccpsc/310/blob/2019sept/README.md#project-sprint-schedule).
-These resources will be frequently updated as the term progresses.
 
 ## Configuring your environment
 
