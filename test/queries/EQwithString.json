@@ -1,0 +1,40 @@
+{
+    "title": "EQwithString",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 60
+                    }
+                },
+                {
+                    "LT": {
+                        "courses_avg": 70
+                    }
+                },
+                {
+                    "NOT": {
+                        "EQ": {
+                            "courses_uuid": "81787"
+                        }
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_year": 2015
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_dept"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

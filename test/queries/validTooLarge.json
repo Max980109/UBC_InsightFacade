@@ -1,0 +1,43 @@
+{
+    "title": "tooLarge",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 80
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_avg": 70
+                    }
+                },
+                {
+                    "NOT": {
+                        "OR": [
+                            {
+                                "IS": {
+                                    "courses_dept": "math"
+                                }
+                            },
+                            {
+                                "IS": {
+                                    "courses_dept": "cpsc"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError" }

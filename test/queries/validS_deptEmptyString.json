@@ -1,0 +1,45 @@
+{
+    "title": "test sfield",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "courses_id": "449"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_uuid": "81787"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_instructor": "d*"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_title": "*c*"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept":""
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+
+            ],
+            "ORDER": "courses_dept"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
+

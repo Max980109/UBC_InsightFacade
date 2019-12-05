@@ -1,0 +1,6 @@
+{
+    "query1": "course query for cpsc courses with average > 90",
+    "complex_any": "complex query with apply",
+    "complex_not": "complex query with order as string"
+}
+

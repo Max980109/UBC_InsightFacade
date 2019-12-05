@@ -1,0 +1,19 @@
+{
+    "title": "hypotheticalDataset",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "coursesfake_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "coursesfake_dept",
+                "coursesfake_avg"
+            ],
+            "ORDER": "coursesfake_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

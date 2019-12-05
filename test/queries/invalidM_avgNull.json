@@ -1,0 +1,40 @@
+{
+    "title": "test mfield",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 60
+                    }
+                },
+                {
+                    "LT": {
+                        "courses_avg": null
+                    }
+                },
+                {
+                    "NOT": {
+                        "EQ": {
+                            "courses_audit": 20
+                        }
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_year": 2015
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_dept"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

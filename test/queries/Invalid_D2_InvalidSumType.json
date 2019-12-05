@@ -1,0 +1,56 @@
+{
+    "title": " Invalid apply rule target key Sum",
+    "query": {
+        "WHERE": {
+            "AND": [{
+                "IS": {
+                    "rooms_furniture": "*Tables*"
+                }
+            }, {
+                "GT": {
+                    "rooms_seats": 300
+                }
+            }]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "maxSeats",
+                "minSeats",
+                "sumSeats",
+                "avgSeats",
+                "countSeats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["maxSeats"]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["rooms_shortname"],
+            "APPLY": [{
+                "maxSeats": {
+                    "MAX": "rooms_seats"
+                }
+            }, {
+                "minSeats": {
+                    "MIN": "rooms_seats"
+                }
+            }, {
+                "avgSeats": {
+                    "AVG": "rooms_seats"
+                }
+            }, {
+                "sumSeats": {
+                    "SUM": 4
+                }
+            }, {
+                "countSeats": {
+                    "COUNT": "rooms_seats"
+                }
+            }]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

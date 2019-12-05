@@ -1,0 +1,40 @@
+{
+    "title": "ORDER missing 'dir' key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg",
+                "courses_year",
+                "minScore"
+            ],
+            "ORDER": {
+                "keys": [
+                    "courses_avg",
+                    "courses_year"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_dept",
+                "courses_avg",
+                "courses_year"
+            ],
+            "APPLY": [
+                {
+                    "minScore": {
+                        "MIN": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

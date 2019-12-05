@@ -1,0 +1,27 @@
+{
+    "title": "Valid Three",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg",
+                "minScore"
+            ],
+            "ORDER": "courses_avg"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept",  "courses_avg"],
+            "APPLY": [{
+                "minScore": {
+                    "MIN": "courses_avg"
+                }
+            }]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"epse","courses_avg":97.09,"minScore":97.09},{"courses_dept":"math","courses_avg":97.09,"minScore":97.09},{"courses_dept":"math","courses_avg":97.25,"minScore":97.25},{"courses_dept":"epse","courses_avg":97.29,"minScore":97.29},{"courses_dept":"nurs","courses_avg":97.33,"minScore":97.33},{"courses_dept":"epse","courses_avg":97.41,"minScore":97.41},{"courses_dept":"cnps","courses_avg":97.47,"minScore":97.47},{"courses_dept":"math","courses_avg":97.48,"minScore":97.48},{"courses_dept":"educ","courses_avg":97.5,"minScore":97.5},{"courses_dept":"nurs","courses_avg":97.53,"minScore":97.53},{"courses_dept":"epse","courses_avg":97.67,"minScore":97.67},{"courses_dept":"epse","courses_avg":97.69,"minScore":97.69},{"courses_dept":"epse","courses_avg":97.78,"minScore":97.78},{"courses_dept":"crwr","courses_avg":98,"minScore":98},{"courses_dept":"epse","courses_avg":98.08,"minScore":98.08},{"courses_dept":"nurs","courses_avg":98.21,"minScore":98.21},{"courses_dept":"epse","courses_avg":98.36,"minScore":98.36},{"courses_dept":"epse","courses_avg":98.45,"minScore":98.45},{"courses_dept":"nurs","courses_avg":98.5,"minScore":98.5},{"courses_dept":"nurs","courses_avg":98.58,"minScore":98.58},{"courses_dept":"epse","courses_avg":98.58,"minScore":98.58},{"courses_dept":"epse","courses_avg":98.7,"minScore":98.7},{"courses_dept":"nurs","courses_avg":98.71,"minScore":98.71},{"courses_dept":"eece","courses_avg":98.75,"minScore":98.75},{"courses_dept":"epse","courses_avg":98.76,"minScore":98.76},{"courses_dept":"epse","courses_avg":98.8,"minScore":98.8},{"courses_dept":"spph","courses_avg":98.98,"minScore":98.98},{"courses_dept":"cnps","courses_avg":99.19,"minScore":99.19},{"courses_dept":"math","courses_avg":99.78,"minScore":99.78}]}
